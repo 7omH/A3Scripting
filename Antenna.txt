@@ -1,0 +1,16 @@
+/*
+TS code:
+addAntenna,if incorrect exits, if not found in list creates, if found in list updates entry
+removeAntenna, if incorrect exits, if found in list erase entry
+
+Work around to Game crash/disconnect (where TS stays up) :
+a) restart TS 
+b) do addAntenna & removeAntenna on JIP = use remoteExec on object (do multiple remote exec exist or only one that gets overwritten)
+	active onos will update and those removed will be as well
+
+Work around if TS Crash (game stays up) :
+???
+	relog into server...
+
+
+*/

@@ -1,0 +1,5 @@
+// Set/Change Cargo size to 3
+[_this, 3] call ace_cargo_fnc_setSpace
+
+//Set/Change Size of object
+[_this, 2] call ace_cargo_fnc_setSize

@@ -1,0 +1,12 @@
+\\ Using CZA, local execute on the item to get hint
+\\
+\\Checking weight of box and contents
+_box = getMass _this;
+_total = _this call ace_dragging_fnc_getWeight;
+_load = loadAbs _this;
+hint format [ "((Box + Load)/2)* Weight Coeff.= ACE Total\nBox Weight :\n%1\nLoad weight :\n%2\nACE Total Weight :\n%3\n\nDefault Carry limit : 600\nDefault Drag limit :800", str _box,str _load, str _total];
+
+
+\\Pre 3.16 weight check for container
+_PrevWeight + getNumber (configOf _this >> "mass");
+hint str _PrevWeight;

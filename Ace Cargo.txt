@@ -8,6 +8,7 @@
 [_this, -1] call ace_cargo_fnc_setSize;
 
 //Use Default Arsenal Import to create an "everything standard" box
-{_this addItemCargo [_y, 1] } forEach [
+{_this addItemCargo [_x,1] } forEach [
 // Paste default arsenal output here
+"arifle_MX_F","arifle_MXC_F","optic_Arco","optic_Holosight"
 ];

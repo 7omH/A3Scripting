@@ -9,8 +9,15 @@ b) do addAntenna & removeAntenna on JIP = use remoteExec on object (do multiple 
 	active onos will update and those removed will be as well
 
 Work around if TS Crash (game stays up) :
-???
-	relog into server...
+???Might not need to, code seems to lead that it refreshes antennas... need to test
+	2 check this TFAR_ConfigRefresh https://github.com/michail-nikolaev/task-force-arma-3-radio/blob/6332aaa7a2099d45246981287c4a167ad8696088/addons/antennas/XEH_preInit.sqf#L9
+	
+	3 create script to handle RAntennas, add a player action that resets current radios 
+	GVAR(radioTowerList) = [] call CBA_fnc_hashCreate;
+	[GVAR(radioTowerList), _tower, _range] call CBA_fnc_hashSet;
+	private _range = [GVAR(radioTowerList),_x] call CBA_fnc_hashGet;
+	private _netID = netID _x;
+	[_tower1, _tower2] call TFAR_antennas_fnc_pluginAddRadioTower;
 
 
 */

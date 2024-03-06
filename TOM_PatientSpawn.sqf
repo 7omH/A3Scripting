@@ -22,27 +22,27 @@ _unit = _Grp createUnit [_selectedType, _handler,[], 5, "NONE"];
 hint _injurType;
 switch (_injurType) do
 	{
-	case "customTest1":
+	case "SetMedium":
 		{
 		_flag = 1;
-		[_victim, 0.7, "Head", "bullet"] call ace_medical_fnc_addDamageToUnit;
-		[_victim, 0.5, "Head", "backblast"] call ace_medical_fnc_addDamageToUnit;
-		[_victim, 0.3, "Body", "bullet"] call ace_medical_fnc_addDamageToUnit;
-		[_victim, 0.3, "Body", "bullet"] call ace_medical_fnc_addDamageToUnit;
-		[_victim, 0.3, "Body", "bullet"] call ace_medical_fnc_addDamageToUnit;
-		[_victim, 0.5, "RightArm", "bullet"] call ace_medical_fnc_addDamageToUnit;
-		[_victim, 0.2, "RightLeg", "bullet"] call ace_medical_fnc_addDamageToUnit;
-		[_victim, 0.2, "RightLeg", "explosive"] call ace_medical_fnc_addDamageToUnit;
+		[_unit, 0.7, "Head", "bullet"] call ace_medical_fnc_addDamageToUnit;
+		[_unit, 0.5, "Head", "backblast"] call ace_medical_fnc_addDamageToUnit;
+		[_unit, 0.3, "Body", "bullet"] call ace_medical_fnc_addDamageToUnit;
+		[_unit, 0.3, "Body", "bullet"] call ace_medical_fnc_addDamageToUnit;
+		[_unit, 0.3, "Body", "bullet"] call ace_medical_fnc_addDamageToUnit;
+		[_unit, 0.5, "RightArm", "bullet"] call ace_medical_fnc_addDamageToUnit;
+		[_unit, 0.2, "RightLeg", "bullet"] call ace_medical_fnc_addDamageToUnit;
+		[_unit, 0.2, "RightLeg", "explosive"] call ace_medical_fnc_addDamageToUnit;
 	  	};
 	case "customLArm":
 		{
 		_flag = 1;
-		[_victim, 0.4, "LeftArm", "bullet"] call ace_medical_fnc_addDamageToUnit;
-		[_victim, 0.4, "LeftArm", "bullet"] call ace_medical_fnc_addDamageToUnit;
-		[_victim, 0.4, "LeftArm", "bullet"] call ace_medical_fnc_addDamageToUnit;
-		[_victim, 0.4, "LeftArm", "bullet"] call ace_medical_fnc_addDamageToUnit;
-		[_victim, 0.6, "LeftArm", "bullet"] call ace_medical_fnc_addDamageToUnit;
-		[_victim, 0.4, "LeftArm", "bullet"] call ace_medical_fnc_addDamageToUnit;
+		[_unit, 0.4, "LeftArm", "bullet"] call ace_medical_fnc_addDamageToUnit;
+		[_unit, 0.4, "LeftArm", "bullet"] call ace_medical_fnc_addDamageToUnit;
+		[_unit, 0.4, "LeftArm", "bullet"] call ace_medical_fnc_addDamageToUnit;
+		[_unit, 0.4, "LeftArm", "bullet"] call ace_medical_fnc_addDamageToUnit;
+		[_unit, 0.6, "LeftArm", "bullet"] call ace_medical_fnc_addDamageToUnit;
+		[_unit, 0.4, "LeftArm", "bullet"] call ace_medical_fnc_addDamageToUnit;
 		};	
 	case "SetNone":
 		{

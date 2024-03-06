@@ -6,8 +6,10 @@ params [
 	];
 _counterInjuries = 0;
 _randomSkip = 0;
+_woundCOunt = 0;
 _selectedType = selectRandom _unitType;
 _bodypart = ["Head", "Body", "LeftArm", "RightArm", "LeftLeg", "RightLeg"];
+_damageType = ["bullet", "grenade", "explosive", "shell", "vehiclecrash", "backblast", "stab", "punch", "falling", "unknown"];
 
 //Unit creation, check BI documentation for spawning in vehicle
 _Grp = createGroup civilian;
@@ -58,7 +60,7 @@ switch (_injurType) do
 	  	};
     	case "RandHeavy":
 		{
-		_woundcount = 10;
+		_woundCount = 10;
 		_damageType = ["bullet", "grenade", "explosive", "shell", "vehiclecrash", "backblast", "stab", "punch", "falling", "unknown"];		
 		};
 	case "RandMedium":

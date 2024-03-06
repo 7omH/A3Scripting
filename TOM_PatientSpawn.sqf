@@ -1,4 +1,4 @@
-//example init or on trigger activation : [SpawnA, 5, 7] execVM "TOM_PatientSpawn.sqf";
+//Use in Zeus Execute Code : [_this select 0, "SetMedium",["C_Soldier_VR_F", "C_man_shorts_2_F","C_Man_casual_4_F"]] execVM "TOM_PatientSpawn.sqf";
 params [
 	"_spawnPos", //3D pos stripped to 2d pos
 	["_injurType", "RandMedium"], // Type of casualty : SetLight, SetMedium, SetHigh, SetKIA, SetUncon, SetNone, RandLight, RandMedium, RandHigh
@@ -34,7 +34,7 @@ switch (_injurType) do
 		[_unit, 0.2, "RightLeg", "bullet"] call ace_medical_fnc_addDamageToUnit;
 		[_unit, 0.2, "RightLeg", "explosive"] call ace_medical_fnc_addDamageToUnit;
 	  	};
-	case "customLArm":
+	case "SetArm":
 		{
 		_flag = 1;
 		[_unit, 0.4, "LeftArm", "bullet"] call ace_medical_fnc_addDamageToUnit;

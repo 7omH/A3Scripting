@@ -65,12 +65,12 @@ for "i" from 1 to _numberPatient do
 			};
 			case "RandHeavy":
 			{
-			_woundCount = 10;
+			_woundCount = 15;
 			_damageType = ["bullet", "grenade", "explosive", "shell", "vehiclecrash", "backblast", "stab", "punch", "falling", "unknown"];		
 			};
 		case "RandMedium":
 			{
-			_woundCount = 5;
+			_woundCount = 6;
 			_damageType = ["bullet", "grenade", "explosive", "shell", "vehiclecrash", "backblast", "stab", "punch", "falling", "unknown"];		
 			};
 		case "RandLight":

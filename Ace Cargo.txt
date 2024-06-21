@@ -14,16 +14,17 @@
 ];
 
 
-// Import/Export from zeus
+// Export inventory
 private _array = [];
 private _content = getItemCargo _this;
 private _a = _content select 0;
 private _b = _content select 1;
-{_array append [_x,_b select _forEachIndex]} forEach _a;
+{_array append [[_x,_b select _forEachIndex]]} forEach _a;
 copyToClipboard str _array;
 hint format ["Copied to clipboard\n%1",str _array];
 
-
-{_this addItemCargo _x } forEach [
+//Import inventory
+clearItemCargo myBox;
+{_this addItemCargo _x } forEach 
 // Paste generator/website output
-];
+;

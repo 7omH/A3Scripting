@@ -12,3 +12,18 @@
 // Paste default arsenal output here
 "arifle_MX_F","arifle_MXC_F","optic_Arco","optic_Holosight"
 ];
+
+
+// Import/Export from zeus
+private _array = [];
+private _content = getItemCargo _this;
+private _a = _content select 0;
+private _b = _content select 1;
+{_array append [_x,_b select _forEachIndex]} forEach _a;
+copyToClipboard str _array;
+hint format ["Copied to clipboard\n%1",str _array];
+
+
+{_this addItemCargo _x } forEach [
+// Paste generator/website output
+];

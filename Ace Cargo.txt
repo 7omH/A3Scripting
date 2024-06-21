@@ -24,7 +24,7 @@ copyToClipboard str _array;
 hint format ["Copied to clipboard\n%1",str _array];
 
 //Import inventory
-clearItemCargo myBox;
+clearItemCargo _this;
 {_this addItemCargo _x } forEach 
 // Paste generator/website output
 ;

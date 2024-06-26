@@ -13,32 +13,3 @@
 "arifle_MX_F","arifle_MXC_F","optic_Arco","optic_Holosight"
 ];
 
-
-----------
-// Export inventory
-private _array = [];
-sortIt = {
-private _working = [];
-private _item = _content select 0;
-private _count = _content select 1;
-{_working append [[_x,_count select _forEachIndex]]} forEach _item;
-_array append [_working];};
-private _content = getMagazineCargo _this;
-call sortIt;
-_content = getWeaponCargo _this;
-call sortIt;
-_content = getItemCargo _this;
-call sortIt;
-copyToClipboard str _array;
-hint format ["Copied to clipboard\n%1",str _array];
-
-
-//Import inventory
-private _count = 0;
-private _array = 
-// Paste generator/website output here
-;
-{if( _this isNotEqualTo [])then{_this addMagazineCargo _x;_count=_count+1 }} forEach (_array select 0);
-{if( _this isNotEqualTo [])then{_this addWeaponCargo _x;_count=_count+1 }} forEach (_array select 1);
-{if( _this isNotEqualTo [])then{_this addItemCargo _x;_count=_count+1 }} forEach (_array select 2);
-hint format ["%1 Items handled",str _count];

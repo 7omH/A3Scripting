@@ -13,3 +13,5 @@
 "arifle_MX_F","arifle_MXC_F","optic_Arco","optic_Holosight"
 ];
 
+//Set cargo custom name with script (shows up in list views)
+_this setVariable ["ace_cargo_customName", "XXX", true];
